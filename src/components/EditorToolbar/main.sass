@@ -1,0 +1,40 @@
+@import "../../styles/vars"
+
+#toolbar
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    > .editor-button
+        display: flex
+        width: 2rem
+        height: 2rem
+        margin: 0 0.25rem
+        padding: 0 auto
+        text-align: center
+        align-items: center
+        justify-content: center
+        border-radius: 5px
+        background-color: #fff
+        border: 0
+        &.ql-size
+            margin: 0
+            font-family: $playfair-font-family
+            font-weight: 700
+            &.large
+                font-size: 1.2rem
+            &.small
+                font-size: 0.8rem
+        .ql-stroke
+            stroke: #555 !important
+            stroke-width: 1.5
+        &.ql-active
+            box-shadow: $shadow-small
+            color: #000 !important
+            .ql-stroke
+                stroke: #000 !important
+                stroke-width: 2
+    .divider
+        height: 2rem
+        margin: 0 0.5rem
+        border-right: 1px solid #999
+
