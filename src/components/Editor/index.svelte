@@ -5,26 +5,27 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import EditorToolbar from '@/components/EditorToolbar/index.svelte';
-
+	
 	let editor;
+	let quill;
 
 	onMount(
 		async () => {
 			const { default: Quill } = await import('quill');
 
-			let quill = new Quill(editor, {
+			quill = new Quill(editor, {
 				modules: {
-					toolbar: '#toolbar'
+					toolbar: '#popup-toolbar'
 				},
 				theme: 'snow',
 				placeholder: 'Here is the truth...'
 			})
 		}
-	)
+	);
 </script>
 
 <div class="editor-container">
-	<EditorToolbar />
+	<EditorToolbar quill={quill} />
 	<input id="title" type="text" class="text-3xl" placeholder="The story of...">
-	<div class="editor" bind:this={editor}></div>
+	<div id="editor" class="editor" bind:this={editor}></div>
 </div>
