@@ -2,17 +2,9 @@
 	@import './main.sass'
 </style>
 
-<script lang="ts">
-    import FaFont from 'svelte-icons/fa/FaFont.svelte'
-
-</script>
-
 <div id="toolbar">
-    <button class="editor-button ql-header ql-size large ql-active" value={1}>
-        T
-    </button>
-    <button class="editor-button ql-size small" value="">
-        T
+    <button class="editor-button ql-header ql-size ql-active" value={3}>
+        H1
     </button>
 
     <span class="divider"></span>
