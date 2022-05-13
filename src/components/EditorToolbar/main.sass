@@ -1,6 +1,19 @@
 @import "../../styles/vars"
 
 #popup-toolbar
+    position: absolute
+    z-index: -1
+    opacity: 0
+    background-color: #fff
+    border-radius: 5px
+    padding: 0.25rem 0.5rem
+    box-shadow: $shadow-main
+    transform: translate(-50%, -10px)
+    transition: 0.15s opacity ease-out, 0.3s transform ease-out, 0.15s z-index ease
+    &.active
+        z-index: 999
+        opacity: 1
+        transform: translate(-50%, 0)
     &::before
         content: ''
         position: absolute
@@ -9,17 +22,12 @@
         border: 10px solid transparent
         border-top-color: #fff
         margin-left: -10px
-    position: absolute
-    z-index: 999
-    background-color: #fff
-    border-radius: 5px
-    box-shadow: $shadow-main
-    transform: translateX(-50%)
     
-.toolbar, #toolbar
+.toolbar, #static-toolbar
     display: flex
     flex-direction: row
     flex-wrap: nowrap
+    align-items: center
     > .editor-button
         display: flex
         width: 2rem
@@ -38,6 +46,7 @@
             margin: 0
             font-family: $playfair-font-family
             font-weight: 700
+            line-height: 1
         .ql-stroke
             stroke: #555 !important
             stroke-width: 1.5

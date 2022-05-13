@@ -15,7 +15,7 @@
 
 			quill = new Quill(editor, {
 				modules: {
-					toolbar: '#popup-toolbar'
+					toolbar: '#toolbar'
 				},
 				theme: 'snow',
 				placeholder: 'Here is the truth...'
