@@ -1,3 +1,4 @@
+
 <script lang="ts">
     export let quill;
 
@@ -82,6 +83,11 @@
         <button class="editor-button ql-align" value="center" />
         <button class="editor-button ql-align" value="right" />
         <button class="editor-button ql-align" value="justify" />
+
+        <span class="divider" />
+
+        <button class="editor-button ql-link" />
+        <button class="editor-button ql-code-block" />
     </div>
 
     <div id="static-toolbar" class="toolbar">
@@ -96,11 +102,17 @@
         <button class="editor-button ql-underline" />
 
         <span class="divider" />
-
+        
         <button class="editor-button ql-align ql-active" value="" />
         <button class="editor-button ql-align" value="center" />
         <button class="editor-button ql-align" value="right" />
         <button class="editor-button ql-align" value="justify" />
+        
+        <span class="divider" />
+
+        <button class="editor-button ql-link" />
+        <button class="editor-button ql-image" />
+        <button class="editor-button ql-code-block" />
     </div>
 </div>
 
